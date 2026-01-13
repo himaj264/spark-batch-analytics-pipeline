@@ -1,0 +1,94 @@
+# =====================================================
+# Spark Batch Analytics Pipeline - Docker Compose
+# =====================================================
+# Optimized for Mac M2 with 8GB RAM
+# Services: PostgreSQL, Spark Application, pgAdmin (optional)
+
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: analytics-postgres
+    environment:
+      POSTGRES_DB: analytics_db
+      POSTGRES_USER: analytics_user
+      POSTGRES_PASSWORD: analytics_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U analytics_user -d analytics_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    # Memory limit for 8GB RAM machine
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+    networks:
+      - analytics-network
+
+  # Spark ETL Application
+  spark-etl:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spark-etl-pipeline
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=analytics_db
+      - POSTGRES_USER=analytics_user
+      - POSTGRES_PASSWORD=analytics_pass
+      - SPARK_DRIVER_MEMORY=2g
+      - SPARK_EXECUTOR_MEMORY=1g
+    volumes:
+      - ./data/raw:/app/data/raw:ro
+      - ./data/processed:/app/data/processed
+      - ./src:/app/src:ro
+      - ./logs:/app/logs
+    # Memory limit for 8GB RAM machine
+    deploy:
+      resources:
+        limits:
+          memory: 3G
+    networks:
+      - analytics-network
+
+  # pgAdmin (Optional - for database visualization)
+  # Uncomment if you want a web UI to explore PostgreSQL
+  # pgadmin:
+  #   image: dpage/pgadmin4:latest
+  #   container_name: analytics-pgadmin
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: admin@admin.com
+  #     PGADMIN_DEFAULT_PASSWORD: admin
+  #   ports:
+  #     - "5050:80"
+  #   depends_on:
+  #     - postgres
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         memory: 256M
+  #   networks:
+  #     - analytics-network
+
+# Named volumes for data persistence
+volumes:
+  postgres_data:
+    driver: local
+
+# Network configuration
+networks:
+  analytics-network:
+    driver: bridge
+    name: spark-analytics-network

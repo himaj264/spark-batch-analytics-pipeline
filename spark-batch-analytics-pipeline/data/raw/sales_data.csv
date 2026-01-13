@@ -1,0 +1,51 @@
+transaction_id,customer_id,product_id,product_name,category,quantity,unit_price,transaction_date,store_id,region,payment_method
+TXN001,CUST101,PROD001,Laptop Pro,Electronics,1,1299.99,2024-01-15,STORE01,North,Credit Card
+TXN002,CUST102,PROD002,Wireless Mouse,Electronics,2,29.99,2024-01-15,STORE02,South,Debit Card
+TXN003,CUST103,PROD003,Office Chair,Furniture,1,249.99,2024-01-16,STORE01,North,Credit Card
+TXN004,CUST101,PROD004,USB-C Hub,Electronics,1,79.99,2024-01-16,STORE03,East,PayPal
+TXN005,CUST104,PROD005,Standing Desk,Furniture,1,599.99,2024-01-17,STORE02,South,Credit Card
+TXN006,CUST105,PROD006,Mechanical Keyboard,Electronics,1,149.99,2024-01-17,STORE01,North,Debit Card
+TXN007,CUST102,PROD007,Monitor 27inch,Electronics,2,399.99,2024-01-18,STORE04,West,Credit Card
+TXN008,CUST106,PROD008,Desk Lamp,Furniture,3,34.99,2024-01-18,STORE02,South,Cash
+TXN009,CUST107,PROD009,Webcam HD,Electronics,1,89.99,2024-01-19,STORE01,North,Credit Card
+TXN010,CUST108,PROD010,Ergonomic Mouse Pad,Accessories,2,19.99,2024-01-19,STORE03,East,Debit Card
+TXN011,CUST103,PROD001,Laptop Pro,Electronics,1,1299.99,2024-01-20,STORE04,West,Credit Card
+TXN012,CUST109,PROD011,Bluetooth Speaker,Electronics,1,79.99,2024-01-20,STORE01,North,PayPal
+TXN013,CUST110,PROD012,Filing Cabinet,Furniture,1,189.99,2024-01-21,STORE02,South,Credit Card
+TXN014,CUST101,PROD002,Wireless Mouse,Electronics,1,29.99,2024-01-21,STORE01,North,Debit Card
+TXN015,CUST111,PROD013,Printer Laser,Electronics,1,299.99,2024-01-22,STORE03,East,Credit Card
+TXN016,CUST112,PROD014,Paper Shredder,Office Supplies,1,129.99,2024-01-22,STORE04,West,Cash
+TXN017,CUST105,PROD015,Bookshelf,Furniture,1,149.99,2024-01-23,STORE01,North,Credit Card
+TXN018,CUST113,PROD016,External SSD 1TB,Electronics,2,109.99,2024-01-23,STORE02,South,Debit Card
+TXN019,CUST114,PROD017,Whiteboard,Office Supplies,1,89.99,2024-01-24,STORE03,East,Credit Card
+TXN020,CUST102,PROD018,Notebook Set,Office Supplies,5,12.99,2024-01-24,STORE01,North,Cash
+TXN021,CUST115,PROD019,Coffee Maker,Appliances,1,79.99,2024-01-25,STORE04,West,Credit Card
+TXN022,CUST116,PROD020,Desk Organizer,Accessories,2,24.99,2024-01-25,STORE02,South,Debit Card
+TXN023,CUST107,PROD001,Laptop Pro,Electronics,1,1299.99,2024-01-26,STORE01,North,Credit Card
+TXN024,CUST117,PROD021,Headphones Wireless,Electronics,1,199.99,2024-01-26,STORE03,East,PayPal
+TXN025,CUST118,PROD022,Office Plant,Decor,3,29.99,2024-01-27,STORE04,West,Cash
+TXN026,CUST104,PROD006,Mechanical Keyboard,Electronics,1,149.99,2024-01-27,STORE02,South,Credit Card
+TXN027,CUST119,PROD023,Document Scanner,Electronics,1,249.99,2024-01-28,STORE01,North,Debit Card
+TXN028,CUST120,PROD024,Footrest,Furniture,1,49.99,2024-01-28,STORE03,East,Credit Card
+TXN029,CUST108,PROD002,Wireless Mouse,Electronics,3,29.99,2024-01-29,STORE04,West,Cash
+TXN030,CUST121,PROD025,Stapler Set,Office Supplies,2,15.99,2024-01-29,STORE01,North,Debit Card
+TXN031,CUST122,PROD007,Monitor 27inch,Electronics,1,399.99,2024-01-30,STORE02,South,Credit Card
+TXN032,CUST123,PROD026,Pen Holder,Accessories,4,9.99,2024-01-30,STORE03,East,Cash
+TXN033,CUST106,PROD005,Standing Desk,Furniture,1,599.99,2024-01-31,STORE04,West,Credit Card
+TXN034,CUST124,PROD027,USB Flash Drive,Electronics,5,14.99,2024-01-31,STORE01,North,Debit Card
+TXN035,CUST125,PROD028,Clipboard,Office Supplies,3,7.99,2024-02-01,STORE02,South,Cash
+TXN036,CUST109,PROD003,Office Chair,Furniture,2,249.99,2024-02-01,STORE01,North,Credit Card
+TXN037,CUST126,PROD029,Label Maker,Office Supplies,1,59.99,2024-02-02,STORE03,East,Debit Card
+TXN038,CUST127,PROD030,Wall Clock,Decor,1,34.99,2024-02-02,STORE04,West,Cash
+TXN039,CUST110,PROD016,External SSD 1TB,Electronics,1,109.99,2024-02-03,STORE01,North,Credit Card
+TXN040,CUST128,PROD031,Trash Can,Furniture,2,29.99,2024-02-03,STORE02,South,Debit Card
+TXN041,CUST129,PROD032,Power Strip,Electronics,3,24.99,2024-02-04,STORE03,East,Credit Card
+TXN042,CUST103,PROD021,Headphones Wireless,Electronics,1,199.99,2024-02-04,STORE04,West,PayPal
+TXN043,CUST130,PROD033,Calculator,Office Supplies,2,19.99,2024-02-05,STORE01,North,Cash
+TXN044,CUST131,PROD034,Mouse Pad XL,Accessories,1,29.99,2024-02-05,STORE02,South,Debit Card
+TXN045,CUST132,PROD035,Surge Protector,Electronics,1,39.99,2024-02-06,STORE03,East,Credit Card
+TXN046,CUST111,PROD008,Desk Lamp,Furniture,2,34.99,2024-02-06,STORE04,West,Cash
+TXN047,CUST133,PROD036,Binder Set,Office Supplies,4,11.99,2024-02-07,STORE01,North,Debit Card
+TXN048,CUST134,PROD037,Cable Management Kit,Accessories,1,19.99,2024-02-07,STORE02,South,Credit Card
+TXN049,CUST135,PROD038,Tablet Stand,Accessories,1,34.99,2024-02-08,STORE03,East,PayPal
+TXN050,CUST101,PROD007,Monitor 27inch,Electronics,1,399.99,2024-02-08,STORE04,West,Credit Card

@@ -1,0 +1,67 @@
+# =====================================================
+# Spark Batch Analytics Pipeline - Configuration File
+# =====================================================
+
+# Application Settings
+app:
+  name: "SalesBatchAnalytics"
+  version: "1.0.0"
+  log_level: "INFO"
+
+# Spark Configuration
+# Optimized for machines with 8GB RAM
+spark:
+  master: "local[2]"  # Use 2 cores locally
+  driver_memory: "2g"
+  executor_memory: "1g"
+  shuffle_partitions: 4
+  default_parallelism: 4
+
+# Data Paths
+paths:
+  input:
+    raw_data: "/app/data/raw/sales_data.csv"
+  output:
+    processed_data: "/app/data/processed"
+    transformed: "/app/data/processed/transformed_sales"
+    aggregations: "/app/data/processed/aggregations"
+
+# PostgreSQL Database Configuration
+database:
+  host: "postgres"
+  port: 5432
+  name: "analytics_db"
+  user: "analytics_user"
+  # Password should be set via environment variable POSTGRES_PASSWORD
+
+# Table Names
+tables:
+  main: "sales_transactions"
+  aggregations:
+    - "agg_sales_by_category"
+    - "agg_sales_by_region"
+    - "agg_sales_by_payment"
+    - "agg_daily_sales"
+    - "agg_customer_summary"
+    - "agg_product_performance"
+    - "agg_store_performance"
+
+# Data Quality Settings
+quality:
+  # Minimum expected records
+  min_records: 10
+  # Maximum allowed null percentage
+  max_null_percentage: 5
+  # Date format expected
+  date_format: "yyyy-MM-dd"
+
+# Aggregation Settings
+aggregations:
+  enabled:
+    - sales_by_category
+    - sales_by_region
+    - sales_by_payment
+    - daily_sales
+    - customer_summary
+    - product_performance
+    - store_performance

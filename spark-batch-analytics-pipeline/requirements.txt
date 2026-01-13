@@ -1,0 +1,27 @@
+# =====================================================
+# Spark Batch Analytics Pipeline - Python Dependencies
+# =====================================================
+# Compatible with Python 3.9+
+
+# PySpark - Apache Spark Python API
+pyspark==3.5.0
+
+# PostgreSQL adapter (for direct Python connections if needed)
+psycopg2-binary==2.9.9
+
+# Data manipulation and analysis
+pandas==2.1.4
+numpy==1.26.2
+
+# Configuration management
+python-dotenv==1.0.0
+PyYAML==6.0.1
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+
+# Code quality (optional, for development)
+# black==23.12.1
+# flake8==6.1.0
+# mypy==1.8.0
